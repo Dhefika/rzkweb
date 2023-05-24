@@ -5,3 +5,69 @@
     display: flex;
     justify-content: left;
 }
+.header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.container-sidebar {
+    width: 15vw;
+    height: 90vh;
+    border-right: 2px solid rgb(255, 255, 255)
+}
+
+.title-pesanan{
+    width: 13vw;
+    display: flex;
+    font-weight:700;
+    font-size: medium;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.isi-Pesanan{
+    width: 13vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-bottom: 200px;
+}
+
+.title-produk{
+    width: 13vw;
+    display: flex;
+    font-weight:700;
+    font-size: medium;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-bottom: 5px;
+
+}
+
+.isi-produk{
+    width: 13vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.produk-habis{
+    width: 13vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.tambah-produk{
+    width: 13vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+}
