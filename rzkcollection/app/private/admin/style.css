@@ -1,3 +1,7 @@
-div {
-    font-size: 500;
+
+.logo-title{
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    justify-content: left;
 }
