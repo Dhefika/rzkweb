@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Navbar from  './components/navbar';
 import Footer from './components/footer';
-import { calculateOverrideValues } from "next/dist/server/font-utils";
+import { PrismaClient } from '@prisma/client'
 
 document.addEventListener('DOMContentLoaded', function() {
   var links = document.querySelectorAll('nav[role="nav"] a');
@@ -16,8 +16,29 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const prisma = new PrismaClient();
 
-const Home = () => {
+const getVariants = async () => {
+  const res = await prisma.variant.findMany({
+      select:{
+          id: true,
+          stock: true,
+          productId: true,
+          product: true,
+          colorId: true,
+          color: true,
+          sizeId: true,
+          size: true,
+      }
+  });
+  return res;
+}
+
+
+const Home = async() => {
+
+  const variants = await getVariants();
+
   return (
     <body>
       <Navbar />
