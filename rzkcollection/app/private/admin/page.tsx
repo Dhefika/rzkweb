@@ -6,8 +6,8 @@ const Admin = () => {
   return (
     
     <div>
-      <Navbar/>
       <Sidebar/>
+      <Navbar/>
     </div>
   )
 }
