@@ -1,8 +1,11 @@
 import './style.css'
+import Navbar from './components/navbar'
 
 const Admin = () => {
   return (
-    <div><p>admin</p></div>
+    <div>
+      <Navbar />
+    </div>
   )
 }
 
