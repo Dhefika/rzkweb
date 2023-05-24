@@ -2,7 +2,7 @@ import './style.css'
 
 const Admin = () => {
   return (
-    <div>Admin</div>
+    <div><p>admin</p></div>
   )
 }
 
