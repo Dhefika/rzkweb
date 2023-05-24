@@ -1,0 +1,124 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id Int @id @default(autoincrement())
+  productName String
+  productPrice Int
+  productDescription String
+  productImage String
+  variants Variant[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Color {
+  id Int @id @default(autoincrement())
+  colorName String
+  colorHexCode String
+  variants Variant[]
+}
+
+model Size {
+  id Int @id @default(autoincrement())
+  sizeName String
+  variants Variant[]
+}
+
+model Variant {
+  id Int @id @default(autoincrement())
+  stock String
+  product Product @relation(fields: [productId], references: [id])
+  productId Int
+  color Color @relation(fields: [colorId], references: [id])
+  colorId Int
+  size Size @relation(fields: [sizeId], references: [id])
+  sizeId Int
+  carts Cart[]
+}
+
+model Cart {
+  id Int @id @default(autoincrement())
+  qty Int
+  subtotal Int
+  variant Variant @relation(fields: [variantId], references: [id])
+  variantId Int
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  transactions Transaction[]
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String
+  password String
+  email String
+  carts Cart[]
+  transactions Transaction[]
+  alamats Alamat[]
+}
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  transactionNumber String @unique
+  date DateTime @default(now())
+  buktiPembayaran String
+  cart Cart @relation(fields: [cartId], references: [id])
+  cartId Int
+  user User @relation(fields: [userId], references: [id])
+  userId Int
+  transactionStatus TransactionStatus @relation(fields: [transactionStatusId], references: [id])
+  transactionStatusId Int
+  pengiriman Pengiriman @relation(fields: [pengirimanId], references: [id])
+  pengirimanId Int
+  pembayaran Pembayaran @relation(fields: [pembayaranId], references: [id])
+  pembayaranId Int
+  alamat Alamat @relation(fields: [alamatId], references: [id])
+  alamatId Int
+}
+
+model TransactionStatus {
+  id Int @id @default(autoincrement())
+  statusName String
+  transactions Transaction[]
+}
+
+model Alamat {
+  id Int @id @default(autoincrement())
+  nama String
+  phone String
+  address String
+  user User @ relation(fields: [userId], references: [id])
+  userId Int
+  transactions Transaction[]
+}
+
+model Pengiriman {
+  id Int @id @default(autoincrement())
+  nama String
+  transactions Transaction[]
+}
+
+model Pembayaran {
+  id Int @id @default(autoincrement())
+  nama String
+  nomor String
+  transactions Transaction[]
+}
+
+model Admin {
+  id Int @id @default(autoincrement())
+  name String
+  password String
+  pin Int
+}
+

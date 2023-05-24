@@ -1,0 +1,140 @@
+html{
+    background-color: white !important;
+
+}
+.logo-title{
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    justify-content: left;
+}
+
+
+.header{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.container-sidebar {    
+    background-color: white;
+    width: 15vw;
+    height: 90vh;
+    border-right: 2px solid rgb(0, 0, 0)
+}
+
+.title-pesanan{
+    color: black;
+    width: 15vw;
+    display: flex;
+    font-weight:700;
+    font-size: medium;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.isi-Pesanan{
+    color: black;
+    width: 15vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-bottom: 200px;
+}
+
+.title-produk{
+    color: black;
+    width: 15vw;
+    display: flex;
+    font-weight:700;
+    font-size: medium;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-left: 20px;
+    padding-bottom: 5px;
+
+}
+
+.isi-produk{
+    color: black;
+    width: 15vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.produk-habis{
+    color: black;
+    width: 15vw;
+    display: flex;
+    font-weight: 70;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.tambah-produk{
+    color: black;
+    width: 13vw;
+    display: flex;
+    font-weight: 50;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.sidebar-isi {
+    display: flex;
+    background-color: white;
+}
+
+.isi{
+    width: 79vw;
+    height: 20vh;
+    background-color: aliceblue;
+    color: black;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    display: flex;
+
+}
+
+.order {
+    margin-left: 10rem;
+}
+
+.order, .date, .ship-to, .order-total, .status {
+    width: 100vw;
+    margin-top: 2rem;
+    border-bottom: 1px solid black;
+    height: 5vh;
+}
+
+.header-tersedia{
+    width: 40px;
+
+}
+
+.tersedia {
+    width: 85vw;
+    height: 5vh;
+    font-weight: 700;
+    display: flex;
+    color: black;
+    padding-left: 15px;
+    padding-top: 4px;
+    border-bottom: 2px solid black;
+    display: flex;
+}
+
+.isi-tersedia{
+    width: 85vw;
+    margin-right: 10rem;
+}
+
+.isi, .variasi, .Harga, .Stok, .aksi{
+    width: 85vw;
+}
+

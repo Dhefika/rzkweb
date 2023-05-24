@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('./fonts/Montserrat-VariableFont_wght.ttf');
+  font-family: 'Noto Serif Display', serif;
+}
+
+html {
+  background-color: white !important;
+  padding: 75px 10px 10px 10px;
+  scroll-behavior: smooth;
+}
+
+.navList {
+  color: #a6a6a6;
+}
+
+#navbar {
+  width: calc(100% - 20px);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+#main-1 {
+  width: 60%;
+  height: calc(100vh - 85px);
+  background-color: #bbb58a;
+}
+
+#main-1>:nth-child(1), #main-1>:nth-child(2){
+  font-family: 'Noto Serif Display', serif;
+  src: url('./fonts/NotoSerifDisplay-VariableFont_wdth.ttf');
+  font-weight: 900;
+}
+
+#aside-1 {
+  height: calc(100vh - 85px);
+  width: 40%;
+  background-image: url('./assets/615A4CDF-E6BD-4F32-B6DE-971F3A71A4CD.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#box {
+  border: 1px dotted white;
+}
+
+#main-2 {
+  width: 100%;
+  height: 50vh;
+  background-image: url('./assets/GRS03748.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+#aside-2 {
+  height: calc(40vh - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#best {
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 900;
+}
+
+#main-3 {
+  display: flex;
+}
+
+#aside-31 {
+  background-image: url('./assets/ca529bb4-2b8c-4e9e-9ae7-ce1a3a3ee9d3.jpg');
+}
+
+#aside-32 {
+  background-image: url('./assets/IMG_8002.JPG');
+}
+
+#aside-31, #aside-32 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: calc(100vh - 85px);
+}
+
+#sale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  left: 0;
+  font-family: 'Noto Serif Display', serif;
+  font-weight: 900;
+}
+
+footer {
+  margin-top: 1rem;
+  font-family: 'Lora', serif;
+  src: url('./fonts/Lora-VariableFont_wght.ttf');
+}
+
+#footer-top {
+  width: 100%;
+  height: calc(75vh - 75px);
+}
+
+#footer-bot {
+  width: 100%;
+  height: 25vh;
+  background-color: #bbb58a;
+}
+
+#subscribe {
+  height: 30px;
+  background-color: white;
+  font-size: 9px;
+  padding-left: 8px;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+#shopMain {
+  display: flex;
+  justify-content: center;
+}
+
+aside section {
+  height: 63vh;
+  width: 28vw;
+  margin-inline: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section1 {
+  background-image: url('./assets/GRS03747.jpeg');
+}
+
+#section2 {
+  background-image: url('./assets/5E888DA1-AF25-4BFA-ADD7-A5ED7EC3ED47.png');
+}
+
+#section3 {
+  background-image: url('./assets/57B86240-1C08-403C-AD8D-F969DD44ED02.png');
+}
+
+#mainCart {
+  height: calc(100vh - 85px);
+}
+
+#cartBelanja {
+  font-family: 'Noto Serif Display';
+}
+
+#mainCart .box {
+  height: 35vh;
+}
+
+#totalBelanja {
+  height: calc(100% - 85px);
+}
+
+#imgCart {
+  max-height: 100%;
+  width: auto;
+}
